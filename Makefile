@@ -14,7 +14,7 @@ $(OBJS): %.o: %.cpp
 
 $(OUTFILE): $(OBJS)
 	g++ $(OBJS) -o $(OUTFILE)
-	$(OUTFILE) 10 100
+	./$(OUTFILE) 10 100
 
 clean:
 	rm -f *.o $(OUTFILE)
