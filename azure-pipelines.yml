@@ -18,7 +18,7 @@ steps:
 # Copy files from source folder to target folder using match patterns (The match patterns will only match file paths, not folder paths)
 - task: CopyFiles@2
   inputs:
-    #sourceFolder: # Optional
+    sourceFolder: # Optional
     contents: '**' 
     targetFolder: $(Build.ArtifactStagingDirectory)
     cleanTargetFolder: true # Optional
@@ -27,7 +27,7 @@ steps:
 
     # Publish Build Artifacts
 # Publish build artifacts to Azure Pipelines/TFS or a file share
-- task: PublishBuildArtifacts@2
+- task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
     artifactName: 'drop' 
