@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
         const auto end_signed = stoi(argv[2]);
         const auto end = to_uint(end_signed);
 
-        cout << "Primes in range [" << start << ", " << end << "]:" << endl;
+        cout << "All primes in range [" << start << ", " << end << "]:" << endl;
         for (auto n : primes_in_range(start, end))
         {
             cout << n << endl;
