@@ -14,7 +14,7 @@ $(OBJS): %.o: %.cpp
 
 $(OUTFILE): $(OBJS)
 	g++ $(OBJS) -o $(OUTFILE)
-	./$(OUTFILE) 10 100
+	./$(OUTFILE) 1 10000000 | gzip -9 primes.gz
 
 clean:
 	rm -f *.o $(OUTFILE)
