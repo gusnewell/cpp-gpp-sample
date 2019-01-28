@@ -16,4 +16,5 @@ $(OUTFILE): $(OBJS)
 	g++ $(OBJS) -o $(OUTFILE)
 
 clean:
+	$(OUTFILE) 10 100
 	rm -f *.o $(OUTFILE)
